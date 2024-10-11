@@ -1,18 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-//import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Buttons from './buttons';
 
 
 const Card2=({id,name,quantity,price,url,fn})=>{
-    console.log('Card 2 called');
     return (
     <div style={{margin: '4%'}} >
-    <Card sx={{ maxWidth: 250 }}>
+    <Card sx={{ maxWidth: 220 ,minWidth:150}}>
       <CardMedia
         component="img"
         height="170"
@@ -25,12 +23,12 @@ const Card2=({id,name,quantity,price,url,fn})=>{
         Quantity : {quantity}
         </Typography>
         <Typography gutterBottom variant="p" component="div">
-        Price : {price}
+        Price : Rs.{price}
         </Typography>
       </CardContent>
       <CardActions>
-        <Buttons name={'+'} pizza_id={id} fn={fn} val="+"/>
-        <Buttons name={'-'} pizza_id={id} fn={fn} val="-"/>
+        <Buttons name={'+'} prod_id={id} fn={fn} val="+"/>
+        <Buttons name={'-'} prod_id={id} fn={fn} val="-"/>
       </CardActions>
     </Card>
     </div>
